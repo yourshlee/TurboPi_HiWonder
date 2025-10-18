@@ -10,6 +10,20 @@ English | [中文](https://github.com/Hiwonder/TurboPi/blob/main/README_cn.md)
 
 TurboPi is an open-source AI vision vehicle based on Raspberry Pi, specifically designed for beginners. It features a Mecanum wheel chassis and is equipped with a 2-DOF high-definition wide-angle camera. By integrating the OpenCV vision library with the YOLOV5 deep learning framework, it enables multimodal perception and motion control experiments, efficiently completing AI functions such as color recognition, object tracking, autonomous driving, face and gesture recognition!
 
+## Official Resources
+
+### Official Hiwonder
+
+- **Official Website**: [https://www.hiwonder.net/](https://www.hiwonder.net/)
+- **Product Page**: [https://www.hiwonder.com/products/turbopi](https://www.hiwonder.com/products/turbopi)
+- **Official Documentation**: [https://docs.hiwonder.com/projects/TurboPi/en/standard/](https://docs.hiwonder.com/projects/TurboPi/en/standard/)
+- **Technical Support**: support@hiwonder.com
+
+### Related Technologies
+
+- [OpenCV](https://opencv.org/) - Computer Vision Library
+- [MediaPipe](https://mediapipe.dev/) - Machine Learning Framework
+
 ## Key Features
 
 ### AI Vision Functions
@@ -62,20 +76,6 @@ turbopi/
 ├── lab_config.yaml            # Color recognition config
 └── servo_config.yaml          # Servo configuration
 ```
-
-## Official Resources
-
-### Official Hiwonder
-
-- **Official Website**: [https://www.hiwonder.net/](https://www.hiwonder.net/)
-- **Product Page**: [https://www.hiwonder.com/products/turbopi](https://www.hiwonder.com/products/turbopi)
-- **Official Documentation**: [https://docs.hiwonder.com/projects/TurboPi/en/standard/](https://docs.hiwonder.com/projects/TurboPi/en/standard/)
-- **Technical Support**: support@hiwonder.com
-
-### Related Technologies
-
-- [OpenCV](https://opencv.org/) - Computer Vision Library
-- [MediaPipe](https://mediapipe.dev/) - Machine Learning Framework
 
 ## Version Information
 

@@ -12,6 +12,20 @@
 
 TurboPi是一款基于树莓派开发，专为初学者设计的开源AI视觉小车。它采用麦克纳姆轮底盘，配备2自由度高清广角摄像头，融合OpenCV视觉库与YOLOV5深度学习框架，可实现多模态感知与运动控制实验，能够高效完成颜色识别、目标追踪、无人驾驶、人脸与手势识别等AI功能！
 
+## 官方资源
+
+### Hiwonder官方
+
+- **官方网站**: [https://www.hiwonder.net/](https://www.hiwonder.net/)
+- **产品页面**: [https://www.hiwonder.com/products/turbopi](https://www.hiwonder.com/products/turbopi)
+- **官方文档**: [https://docs.hiwonder.com/projects/TurboPi/en/standard/](https://docs.hiwonder.com/projects/TurboPi/en/standard/)
+- **技术支持**: support@hiwonder.com
+
+### 相关技术
+
+- [OpenCV](https://opencv.org/) - 计算机视觉库
+- [MediaPipe](https://mediapipe.dev/) - 机器学习框架
+
 ## 主要功能
 
 ### AI视觉功能
@@ -64,20 +78,6 @@ turbopi/
 ├── lab_config.yaml            # 颜色识别配置
 └── servo_config.yaml          # 舵机配置
 ```
-
-## 官方资源
-
-### Hiwonder官方
-
-- **官方网站**: [https://www.hiwonder.net/](https://www.hiwonder.net/)
-- **产品页面**: [https://www.hiwonder.com/products/turbopi](https://www.hiwonder.com/products/turbopi)
-- **官方文档**: [https://docs.hiwonder.com/projects/TurboPi/en/standard/](https://docs.hiwonder.com/projects/TurboPi/en/standard/)
-- **技术支持**: support@hiwonder.com
-
-### 相关技术
-
-- [OpenCV](https://opencv.org/) - 计算机视觉库
-- [MediaPipe](https://mediapipe.dev/) - 机器学习框架
 
 ## 版本信息
 
