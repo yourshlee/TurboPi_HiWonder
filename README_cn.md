@@ -3,7 +3,7 @@
 [English](https://github.com/Hiwonder/TurboPi/blob/main/README.md) | 中文
 
 <p align="center">
-  <img src="./sources/images/image.png" alt="TurboPi Logo" width="400"/>
+  <img src="./sources/images/turbopi.png" alt="TurboPi Logo" width="600"/>
 </p>
 
 基于树莓派的智能机器人控制系统，集成计算机视觉、自动避障、颜色追踪、人脸识别等AI功能。
