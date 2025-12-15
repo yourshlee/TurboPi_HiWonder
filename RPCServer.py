@@ -17,10 +17,19 @@ import Functions.ColorTracking as ColorTracking_
 import Functions.VisualPatrol as VisualPatrol_
 import Functions.Avoidance as Avoidance_
 import Functions.ColorWarning as ColorWarning_
-import Functions.FaceTracking as FaceTracking_
-import Functions.GestureRecognition as GestureRecognition_
 import Functions.LineFollower as LineFollower_
 import Functions.QuickMark as QuickMark_
+
+# Mediapipe-dependent modules (Python 3.13 compatibility)
+try:
+    import Functions.FaceTracking as FaceTracking_
+    import Functions.GestureRecognition as GestureRecognition_
+    MEDIAPIPE_AVAILABLE = True
+except ImportError:
+    FaceTracking_ = None
+    GestureRecognition_ = None
+    MEDIAPIPE_AVAILABLE = False
+    print("Warning: mediapipe not available - FaceTracking and GestureRecognition disabled")
 
 if sys.version_info.major == 2:
     print('Please run this program with python3!')
@@ -44,10 +53,11 @@ def set_board():
     ColorDetect_.board = board
     ColorTracking_.board = board
     ColorWarning_.board = board
-    FaceTracking_.board = board
-    GestureRecognition_.board = board
     LineFollower_.board = board
     QuickMark_.board = board
+    if MEDIAPIPE_AVAILABLE:
+        FaceTracking_.board = board
+        GestureRecognition_.board = board
     ColorDetect_.initMove()
     board.set_buzzer(1900, 0.3, 0.7, 1)
 
