@@ -1,6 +1,6 @@
 import yaml
-lab_file_path = '/home/pi/TurboPi/lab_config.yaml'
-servo_file_path = '/home/pi/TurboPi/servo_config.yaml'
+lab_file_path = '/home/yourshlee/TurboPi/lab_config.yaml'
+servo_file_path = '/home/yourshlee/TurboPi/servo_config.yaml'
 
 def get_yaml_data(yaml_file):
     file = open(yaml_file, 'r', encoding='utf-8')

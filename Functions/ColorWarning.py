@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # coding=utf8
 import sys
-sys.path.append('/home/pi/TurboPi/')
+sys.path.append('/home/yourshlee/TurboPi/')
 import cv2
 import time
 import math

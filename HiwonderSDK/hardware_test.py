@@ -2,7 +2,7 @@
 # coding=utf8
 import sys
 import time
-sys.path.append('/home/pi/TurboPi/')
+sys.path.append('/home/yourshlee/TurboPi/')
 import HiwonderSDK.ros_robot_controller_sdk as rrc
 
 if sys.version_info.major == 2:
