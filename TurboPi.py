@@ -91,6 +91,7 @@ def startTruckPi():
     
     loading_picture = cv2.imread('/home/yourshlee/TurboPi/loading.jpg')
     cam = Camera.Camera()  # 相机读取(camera reading)
+    cam.camera_open()  # 카메라 열기
     Running.cam = cam
 
     while True:

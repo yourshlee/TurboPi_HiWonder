@@ -35,7 +35,7 @@ class Camera:
 
     def camera_open(self, correction=False):
         try:
-            self.cap = cv2.VideoCapture(-1)
+            self.cap = cv2.VideoCapture(0)  # Use /dev/video0 explicitly
             self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('Y', 'U', 'Y', 'V'))
             self.cap.set(cv2.CAP_PROP_FPS, 30)
             self.cap.set(cv2.CAP_PROP_SATURATION, 40)
@@ -72,13 +72,13 @@ class Camera:
                     else:
                         self.frame = None
                         self.cap.release()
-                        cap = cv2.VideoCapture(-1)
+                        cap = cv2.VideoCapture(0)
                         ret, _ = cap.read()
                         if ret:
                             self.cap = cap
                 elif self.opened:
                     self.cap.release()
-                    cap = cv2.VideoCapture(-1)
+                    cap = cv2.VideoCapture(0)
                     ret, _ = cap.read()
                     if ret:
                         self.cap = cap              
