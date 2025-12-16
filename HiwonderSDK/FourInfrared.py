@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # coding=utf8
 import time
-import smbus
+import smbus2 as smbus
 
 #四路巡线传感器使用例程(4-channel line patrol sensor usage routine)
 

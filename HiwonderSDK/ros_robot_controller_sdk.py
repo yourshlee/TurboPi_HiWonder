@@ -355,7 +355,13 @@ class Board:
         duration = int(duration * 1000)
         data = [0x01, duration & 0xFF, 0xFF & (duration >> 8), len(positions)]
         for i in positions:
-            data.extend(struct.pack("<BH", i[0], i[1]))
+            servo_id, value = i[0], i[1]
+            # Servo1, Servo2 방향 반전 (케이블 연결로 인한 방향 반대 문제 해결)
+            if servo_id == 1:
+                value = 3000 - value
+            if servo_id == 2:
+                value = 3000 - value
+            data.extend(struct.pack("<BH", servo_id, value))
         self.buf_write(PacketFunction.PACKET_FUNC_PWM_SERVO, data)
     
     def pwm_servo_set_offset(self, servo_id, offset):

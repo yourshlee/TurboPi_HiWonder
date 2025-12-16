@@ -62,12 +62,15 @@ class Camera:
                     ret, frame_tmp = self.cap.read()
                     if ret:
                         frame_resize = cv2.resize(frame_tmp, (self.width, self.height), interpolation=cv2.INTER_NEAREST)
-                        
+
                         if self.correction:
-                            self.frame = cv2.remap(frame_resize, self.map1, self.map2, interpolation=cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT)
+                            frame_corrected = cv2.remap(frame_resize, self.map1, self.map2, interpolation=cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT)
                         else:
-                            self.frame = frame_resize
-                            
+                            frame_corrected = frame_resize
+
+                        # 180도 회전 (카메라가 거꾸로 장착됨)
+                        self.frame = cv2.rotate(frame_corrected, cv2.ROTATE_180)
+
                         ret = False
                     else:
                         self.frame = None
