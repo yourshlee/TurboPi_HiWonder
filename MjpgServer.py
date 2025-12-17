@@ -17,7 +17,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer,ThreadingHTTPServer
 from socketserver import ThreadingMixIn
 
 img_show = None
-quality = (int(cv2.IMWRITE_JPEG_QUALITY), 70)
+quality = (int(cv2.IMWRITE_JPEG_QUALITY), 90)
 
 class MJPG_Handler(BaseHTTPRequestHandler):
     def do_GET(self):

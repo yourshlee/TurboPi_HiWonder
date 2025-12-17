@@ -39,6 +39,8 @@ class Camera:
             self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('Y', 'U', 'Y', 'V'))
             self.cap.set(cv2.CAP_PROP_FPS, 30)
             self.cap.set(cv2.CAP_PROP_SATURATION, 40)
+            self.cap.set(cv2.CAP_PROP_SHARPNESS, 8)  # Increase sharpness for better clarity
+            self.cap.set(cv2.CAP_PROP_CONTRAST, 35)  # Moderate contrast
             self.correction = correction
             self.opened = True
         except Exception as e:
@@ -61,7 +63,7 @@ class Camera:
                 if self.opened and self.cap.isOpened():
                     ret, frame_tmp = self.cap.read()
                     if ret:
-                        frame_resize = cv2.resize(frame_tmp, (self.width, self.height), interpolation=cv2.INTER_NEAREST)
+                        frame_resize = cv2.resize(frame_tmp, (self.width, self.height), interpolation=cv2.INTER_LINEAR)
 
                         if self.correction:
                             frame_corrected = cv2.remap(frame_resize, self.map1, self.map2, interpolation=cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT)
